@@ -1,15 +1,12 @@
-import { Container, Text } from '@chakra-ui/react'
+import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
 import Home from '../src/modules/Home'
-export default function IndexPage() {
+export default function HomePage() {
   return (
     <>
-    <Header/>
-    <Home/>
-    <Container centerContent>
-      
-        
-      </Container>
-      </>
+      <Header />
+      <Home />
+      <Footer/>
+    </>
   )
 }

@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Box,
   Flex,
@@ -10,7 +8,7 @@ import {
   Link,
 } from '@chakra-ui/react'
 
-export default function WithSubnavigation() {
+export default function Header() {
 
   return (
     <>
@@ -30,16 +28,15 @@ export default function WithSubnavigation() {
               <Image src='images/gsense.png' width={'130px'} height={'60px'} />
             </Link>
           </Flex>
-
-          <Link alignSelf={'start'}>Home</Link>
-
-
+          <Flex flex={{ base: 0,md: 1 }} justify={'start'}>
+            <Link style={{ color: "black"}} href='/'>Home</Link>
+          </Flex>
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
+            <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'Login'}>
               Logar
             </Button>
             <Button
@@ -48,12 +45,12 @@ export default function WithSubnavigation() {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
-              href={'#'}
+              bg={'blue.400'}
+              href={'/Register'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'blue.300',
               }}>
-              Sign Up
+              Registro
             </Button>
           </Stack>
         </Flex>
