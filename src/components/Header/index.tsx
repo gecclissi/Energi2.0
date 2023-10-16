@@ -23,11 +23,13 @@ export default function Header() {
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
           align={'center'}>
+            
           <Flex flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
             <Link href='/'>
               <Image src='images/gsense.png' width={'130px'} height={'60px'} />
             </Link>
           </Flex>
+          <Box w={'100px'}></Box>
           <Flex flex={{ base: 0,md: 1 }} justify={'start'}>
             <Link style={{ color: "black"}} href='/'>Home</Link>
           </Flex>
@@ -45,11 +47,9 @@ export default function Header() {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'blue.400'}
+              colorScheme='blue'
               href={'/Register'}
-              _hover={{
-                bg: 'blue.300',
-              }}>
+              >
               Registro
             </Button>
           </Stack>

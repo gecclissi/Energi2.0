@@ -63,12 +63,10 @@ export default function Login() {
               <Button
                 loadingText="Submitting"
                 size="lg"
-                bg={'blue.400'}
+                colorScheme='blue'
                 color={'white'}
                 onClick={signIn}
-                _hover={{
-                  bg: 'blue.500',
-                }}>
+                >
                 Logar
               </Button>
             </Stack>

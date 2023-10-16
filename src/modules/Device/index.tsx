@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
+import { Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
 import React from "react"
 
 export default function Device() {
@@ -9,30 +9,32 @@ export default function Device() {
   
     return (
       <>
-        <Button onClick={onOpen}>Open Modal</Button>
-        <Button ml={4} ref={finalRef}>
-          I'll receive focus on close
+      <Box  display={'flex'} justifyContent={'center'} alignItems={'center'} h={'80vh'}>
+        
+        <Button w={'21rem'} h={'16rem'} colorScheme='blue' color={'white'} fontSize={'2xl'}
+       onClick={onOpen}>Adiquirir Serviço
+       <br/> Clique Aqui
         </Button>
-  
+         
         <Modal
           initialFocusRef={initialRef}
           finalFocusRef={finalRef}
           isOpen={isOpen}
           onClose={onClose}
-        >
+          >
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Create your account</ModalHeader>
+            <ModalHeader>Cadastrar Device</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
-                <FormLabel>First name</FormLabel>
-                <Input ref={initialRef} placeholder='First name' />
+                <FormLabel>Nome do Device</FormLabel>
+                <Input ref={initialRef} placeholder='Digite o nome' />
               </FormControl>
   
               <FormControl mt={4}>
-                <FormLabel>Last name</FormLabel>
-                <Input placeholder='Last name' />
+                <FormLabel>Numero do Device</FormLabel>
+                <Input placeholder='Digite o numero' />
               </FormControl>
             </ModalBody>
   
@@ -44,6 +46,7 @@ export default function Device() {
             </ModalFooter>
           </ModalContent>
         </Modal>
+        </Box>
       </>
     )
   }
