@@ -15,15 +15,15 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
+    "/Device": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/pages/Device.js"
     ],
-    "/Register": [
+    "/Dispositivos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Register.js"
+      "static/chunks/pages/Dispositivos.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
