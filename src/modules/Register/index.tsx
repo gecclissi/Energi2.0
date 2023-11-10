@@ -19,6 +19,7 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
 
   const [form, setForm] = useState({
     nome: {
@@ -43,12 +44,18 @@ export default function Register() {
     return /\S+@\S+\.\S+?/.test(email);
   };
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica de registro, como fazer uma solicitação para um servidor ou armazenar os dados localmente.
-    console.log('Dados de registro:', form);
+    
+    console.log("Dados de registro:", form);
+
+    if (form.senha.value === form.senha2.value) {
+      setPasswordsMatch(true);
+    } else {
+      setPasswordsMatch(false);
+    }
   };
+
 
   return (
     <Flex
@@ -180,6 +187,11 @@ export default function Register() {
                 <Text color={"red"} data-testid="senha2-required">
                   Senha e obrigatorio
                 </Text>
+              )}
+              {!passwordsMatch && (
+                <p style={{ color: "red" }}>
+                  As senhas não coincidem. Por favor, tente novamente.
+                </p>
               )}
             </FormControl>
             <Stack spacing={10} pt={2}>
