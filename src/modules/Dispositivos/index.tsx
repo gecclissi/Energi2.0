@@ -15,7 +15,7 @@ export default function User() {
                         <Heading size='lg' color={'white'}> Device</Heading>
                     </CardHeader>
                     <CardBody color={'white'}>
-                        <Text>Devide de </Text>
+                        <Text>Device de </Text>
                         <Text>Numero </Text>
                     </CardBody>
                     <CardFooter justifyContent={'center'} >
